@@ -1,5 +1,7 @@
 import pygame
 from pygame.locals import *
+from OpenGL.GL import *
+from OpenGL.GLU import *
 
 pygame.init()
 screen_width, screen_height = 1000, 800
