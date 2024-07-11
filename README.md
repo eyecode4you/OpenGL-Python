@@ -1,2 +1,2 @@
 # OpenGL-Python
-Working with OpenGL through Python
+Working with OpenGL through Python (PyGame)
