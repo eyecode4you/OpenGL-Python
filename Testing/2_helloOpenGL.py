@@ -14,7 +14,8 @@ def init_ortho():
     """ Setup 2D Graphic Generation (orthographic) Mode """
     glMatrixMode(GL_PROJECTION)  # for camera/world projection
     glLoadIdentity()  # clear GL_PROJECTION & provide new palette
-    gluOrtho2D(0, 640, 0, 480)  # set window coords (x1, x2, y1, y2)
+    # set window coords (left, right, bottom, top). 0's here set origin at bottom-left
+    gluOrtho2D(0, 640, 0, 480)
 
 
 done = False
