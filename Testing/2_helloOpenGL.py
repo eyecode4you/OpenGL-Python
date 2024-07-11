@@ -1,4 +1,4 @@
-""" Draw point on screen with OpenGL """
+""" Draw points on screen with OpenGL """
 import pygame
 from pygame.locals import *
 from OpenGL.GL import *
@@ -31,6 +31,7 @@ while not done:
     glPointSize(5)  # set size of points on screen
     glBegin(GL_POINTS)  # every glBegin needs a matching glEnd
     glVertex2i(100, 50)  # put a point at x,y coord
+    glVertex2i(630, 450)
     glEnd()
 
     pygame.display.flip()
