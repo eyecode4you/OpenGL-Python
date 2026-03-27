@@ -75,4 +75,15 @@ while not done:
             if event.key == pygame.K_ESCAPE:
                 done = True
 
-          
+    randomize()
+    pygame.time.wait(500)
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
+    glMatrixMode(GL_MODELVIEW)
+    glLoadIdentity()
+    glBegin(GL_POINTS)
+    glVertex2f(0, 0)
+    glEnd()
+    reset_turtle()
+    draw_turtle()
+    pygame.display.flip()
+pygame.quit()
