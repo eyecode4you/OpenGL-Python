@@ -17,3 +17,26 @@ screen = pygame.display.set_mode((screen_width, screen_height), DOUBLEBUF | OPEN
 pygame.display.set_caption('SpiralsGenerator')
 current_position = (0, 0)
 direction = np.array([0, 1, 0])
+
+def init_ortho():
+  glMatrixMode(GL_PROJECTION)
+  glLoadIdentity()
+  gluOrtho2D(ortho_left, ortho_right, ortho_top, ortho_bottom)
+  
+def line_to(x, y):
+  global current_position
+  glBegin(GL_LINE_STRIP)
+  glVertex2f(current_position[0], current_position[1])
+  glVertex2f(x, y)
+  current_position = (x, y)
+  glEnd()
+  
+def move_to(x, y):
+  global current_position
+  current_position = (x, y)
+  
+def reset_turtle():
+  global current_position, direction
+  current_position = (0, 0)
+  direction = np.array([0, 1, 0])
+  
