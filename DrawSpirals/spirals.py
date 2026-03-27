@@ -41,3 +41,26 @@ def reset_turtle():
   current_position = (0, 0)
   direction = np.array([0, 1, 0])
   
+def randomize():
+  global x1, x2, x3, x4
+  x1 = random.randint(0, 150)
+  x2 = random.randint(0, 190)
+  x3 = random.randint(0, 150)
+  x4 = random.randint(0, 62)
+  
+def draw_turtle():
+  for i in range(100):
+    forward(x1)
+    rotate(x2)
+    forward(x3)
+    rotate(x4)
+    
+def forward(draw_length):
+  new_x = current_position[0] + direction[0] * draw_length
+  new_y = current_position[1] + direction[1] * draw_length
+  line_to(new_x, new_y)
+  
+def rotate(angle):
+  global direction
+  direction = z_rotation(direction, math.radians(angle))
+  
