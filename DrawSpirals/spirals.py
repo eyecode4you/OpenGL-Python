@@ -12,3 +12,8 @@ ortho_left = -400
 ortho_right = 400
 ortho_top = -400
 ortho_bottom = 400
+
+screen = pygame.display.set_mode((screen_width, screen_height), DOUBLEBUF | OPENGL)
+pygame.display.set_caption('SpiralsGenerator')
+current_position = (0, 0)
+direction = np.array([0, 1, 0])
